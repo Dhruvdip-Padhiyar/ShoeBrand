@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+  margin: 1.5em;
+  font-family: "poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.mobile-menu-exit {
+  width: 25px;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/red-shoe.jpg);
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ffff56;
+}
+
+/* ************************************************************** */
+nav {
+  position: fixed;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  background: white;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 130px;
+  padding: 0;
+}
+
+nav ul a {
+  color: black;
+  display: block;
+  padding: 0.75em 2em;
+}
+
+nav ul a:hover {
+  background: #dadada;
+}
+
+nav .mobile-menu-exit {
+  float: right;
+  margin: 2em;
+  width: 1.5em;
+  cursor: pointer;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .mobile-menu {
+  width: 2em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+h1 {
+  display: block;
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.5rem;
+}
+
+.subhead {
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+section.hero {
+  color: white;
+  height: 80vh;
+  -webkit-animation: moveDown 1s ease-in-out forwards;
+          animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+section.hero .down-arrow {
+  position: absolute;
+  width: 1em;
+  bottom: 2em;
+  animation: moveArrow 1s alternate-reverse infinite;
+}
+
+section.hero .down-arrow path {
+  fill: white;
+}
+
+.more-info {
+  padding: 1em 0;
+}
+
+.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 11em;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.open-menu {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.contact-wrapper {
+  padding: 10px;
+}
+
+.contact-wrapper a {
+  color: #000000;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-wrapper a:hover {
+  color: purple;
+}
+
+.contact-wrapper label {
+  font-weight: 600;
+  display: block;
+  margin: 10px 0;
+}
+
+.contact-wrapper input,
+.contact-wrapper textarea {
+  padding: 1em;
+  font-size: 16px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  border: 2px solid gray;
+}
+
+.contact-wrapper input {
+  height: 2.5em;
+}
+
+.contact-wrapper textarea {
+  height: 8em;
+}
+
+.contact-wrapper button {
+  letter-spacing: 1.5px;
+  display: block;
+  margin: 10px 0;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background: #ff6161;
+  color: #ffffff;
+}
+
+.contact-wrapper button:hover {
+  background: #ff2727;
+  cursor: pointer;
+}
+
+.contact-wrapper iframe {
+  margin-top: 10px;
+  width: 100%;
+  height: 90%;
+}
+
+.footer {
+  border: none;
+  background: #e6e1e1;
+  color: #ff6161;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .mobile-menu {
+    display: none;
+  }
+  header {
+    margin-left: 1em;
+  }
+  header .logo {
+    color: black;
+  }
+  header .logo span {
+    color: #e01212;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav .mobile-menu-exit {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    padding: 0 2em;
+    color: #fff;
+    font-size: 0.9em;
+  }
+  nav ul a:hover {
+    background: none;
+    color: #cccccc;
+  }
+  .hero-image {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 40em;
+    background-position-x: 30%;
+  }
+  h1 {
+    color: black;
+    display: block;
+    width: 50%;
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.5rem;
+  }
+  .subhead {
+    color: black;
+    font-size: 1.4rem;
+    width: 40%;
+  }
+  section.hero {
+    color: white;
+  }
+  section.hero .down-arrow {
+    position: unset;
+    padding-top: 2em;
+  }
+  section.hero .down-arrow path {
+    fill: black;
+  }
+  .more-info {
+    display: block;
+  }
+  .more-info .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 4em 0;
+    padding: 0;
+  }
+  .more-info img {
+    width: 40%;
+    height: 15em;
+  }
+  .more-info .content {
+    display: block;
+    width: 30%;
+    text-align: right;
+    padding: 0 7em;
+  }
+  .more-info .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .more-info .left .content {
+    text-align: left;
+  }
+  img {
+    width: 30%;
+  }
+  .contact-wrapper {
+    position: relative;
+    margin: 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-wrapper .contact-right {
+    width: 50%;
+    height: 100%;
+    padding-left: 2em;
+  }
+  .contact-wrapper .contact-right iframe {
+    height: 500px;
+  }
+  .contact-left {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1167px) {
+  .head {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 10px;
+  }
+  .head:before {
+    content: "";
+    width: 90px;
+    height: 5px;
+    background: #000000;
+    left: 5%;
+    top: 50%;
+    position: absolute;
+  }
+  .head:after {
+    content: "";
+    width: 90px;
+    height: 5px;
+    background: #000000;
+    right: 5%;
+    top: 50%;
+    position: absolute;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 0%, 0 0%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 0%, 0 0%);
+  }
+  to {
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 0%, 0 0%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 0%, 0 0%);
+  }
+  to {
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
